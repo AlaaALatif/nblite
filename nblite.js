@@ -35,6 +35,8 @@ function nbToPyScript(nb) {
         '<script defer src="https://pyscript.net/alpha/pyscript.js"></script>',
         '<py-env>',
         ...getDeps(scripts).map(dep => `- `+dep),
+        '- paths:',
+        '   - ./reference.fasta',
         '</py-env>',
         '</head>',
         '<body>',
